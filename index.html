@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dummy</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+
+<style>
+    /* styles.css */
+    
+     :root {
+        --countItemWidth: auto;
+        --itemWith: 31%;
+        --itemWithMobile: 100%;
+        --tabelBorderColor: #ddd;
+    }
+    
+    * {
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    
+    body {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 15px;
+    }
+    
+    .flexTable {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 1px solid var(--tabelBorderColor);
+        margin: 30px 0;
+    }
+    
+    .flexTable .flexTableRow {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        align-content: flex-start;
+        width: 100%;
+        overflow: auto;
+        flex-direction: row;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .flexTable .flexTableRow {
+            flex-direction: column;
+        }
+    }
+    
+    .flexTable .flexTableRow .flexTableItem {
+        flex: 1 1 var(--itemWith);
+        max-width: var(--itemWith);
+        border: 1px solid var(--tabelBorderColor);
+        padding: 10px;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .flexTable .flexTableRow .flexTableItem {
+            flex: 1 1 var(--itemWithMobile);
+            max-width: var(--itemWithMobile);
+            width: 100%;
+            border-width: 1px 0 1px 0;
+        }
+    }
+    
+    .flexTable .flexTableRow .flexTableItem.count {
+        max-width: var(--countItemWidth);
+        flex: 1 1 var(--countItemWidth);
+        text-align: center;
+    }
+    
+    @media only screen and (max-width: 768px) {
+        .flexTable .flexTableRow .flexTableItem.count {
+            text-align: left;
+            background-color: lightGray;
+            font-weight: 700;
+        }
+    }
+    
+    .header {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        align-content: flex-start;
+        width: 100%;
+        overflow: auto;
+        flex-direction: row;
+        padding: 10px;
+        background-color: rgb(247, 245, 245);
+    }
+    
+    .header .searchHolder input {
+        background-color: transparent;
+        border-radius: 5px;
+        padding: 10px;
+        border: 1px solid rgb(189, 188, 188);
+        max-width: 250px;
+        width: 250px;
+    }
+    
+    .header .btnHolder button {
+        background-color: #3744b8;
+        border-radius: 7px;
+        padding: 10px 20px;
+        border: 1px solid rgb(189, 188, 188);
+        color: #fff;
+        line-height: 1;
+    }
+    
+    .header .btnHolder button:hover {
+        background-color: #6b76dd;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="header">
+        <div class="searchHolder">
+
+            <input id="name" type="search" placeholder="search Something">
+        </div>
+
+        <div class="btnHolder">
+            <button>
+                Button
+            </button>
+        </div>
+
+    </div>
+
+    <section class='flexTable'>
+        <div class="flexTableRow">
+            <div class="flexTableItem count">
+                1
+            </div>
+            <div class="flexTableItem">
+                h hejv jdfhodfa
+            </div>
+            <div class="flexTableItem">
+                h hejv jdfhodfa
+            </div>
+            <div class="flexTableItem">
+                h hejv jdfhodfa
+            </div>
+        </div>
+        <div class="flexTableRow">
+            <div class="flexTableItem count">
+                2
+            </div>
+            <div class="flexTableItem">
+                jlbsdnbjfsd dkhfbadf
+            </div>
+            <div class="flexTableItem">
+                h hejv jdfhodfa
+            </div>
+            <div class="flexTableItem">
+                jlbsdnbjfsd dkhfbadf
+            </div>
+        </div>
+        <div class="flexTableRow">
+            <div class="flexTableItem count">
+                3
+            </div>
+            <div class="flexTableItem">
+                sdjfkabsodjfldasdasv sdvsadfa
+            </div>
+            <div class="flexTableItem">
+                jlbsdnbjfsd dkhfbadf
+            </div>
+            <div class="flexTableItem">
+                h hejv jdfhodfa
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
